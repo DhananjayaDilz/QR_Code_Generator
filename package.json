@@ -14,11 +14,14 @@
     "expo": "~50.0.14",
     "expo-app-loading": "^2.1.1",
     "expo-font": "~11.10.3",
+    "expo-splash-screen": "^0.26.4",
     "expo-status-bar": "~1.11.1",
     "fonts": "^0.0.2",
     "lottie-react-native": "^6.7.2",
     "react": "18.2.0",
-    "react-native": "0.73.6"
+    "react-native": "0.73.6",
+    "screen": "^0.2.10",
+    "splash": "^0.3.0"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0"
