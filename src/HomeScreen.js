@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, Button, Image, Alert, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, Text, TextInput, Alert, StyleSheet, TouchableOpacity } from 'react-native';
 import QRCode from 'react-native-qrcode-svg';
 import { useFonts } from 'expo-font';
 import * as SplashScreen from 'expo-splash-screen';
@@ -25,12 +25,12 @@ const QRCodeGenerator = () => {
 
   const generateQRCode = () => {
     // Format the contact details into vCard format
-    const contactDetails = `BEGIN:VCARD
+    const contactDetails = `
 
-Name:${name}
-TEL:${phoneNumber}
-EMAIL:${email}
-END:VCARD`;
+Name: ${name}
+TEL: ${phoneNumber}
+EMAIL: ${email}
+`;
 
     setQRCodeData(contactDetails);
   };

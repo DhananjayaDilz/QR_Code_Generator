@@ -1,15 +1,26 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+
+import { StyleSheet } from 'react-native';
 import WelcomeScreen from './src/WelcomeScreen';
-import HomeScreen from './src/Screen';
-import QRCodeGenerator from './src/Screen';
+
+import QRCodeGenerator from './src/HomeScreen';
+
+import { NavigationContainer } from '@react-navigation/native'
+import { createStackNavigator } from '@react-navigation/stack'
+
+const stack = createStackNavigator()
 
 export default function App() {
+
   return (
-    <View style={styles.container}>
-      <QRCodeGenerator></QRCodeGenerator>
+    
+     <NavigationContainer>
+        <stack.Navigator initialRouteName="welcome" screenOptions={{headerShown: false}}>
+        <stack.Screen name='welcome' component={WelcomeScreen} />
+        <stack.Screen name='Home' component={QRCodeGenerator} />
+        </stack.Navigator>
+    </NavigationContainer>
       
-    </View>
+
   );
 }
 

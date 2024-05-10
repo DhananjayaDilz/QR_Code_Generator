@@ -3,12 +3,16 @@ import { View, Text, StyleSheet, TouchableOpacity } from 'react-native'
 import LottieView from 'lottie-react-native';
 import { useFonts } from 'expo-font';
 import * as SplashScreen from 'expo-splash-screen';
+import { useNavigation } from "@react-navigation/native";
+
+
 
 
 
 
 export default function WelcomeScreen() {
 
+   const navigation=useNavigation()
     const [fontsLoaded] = useFonts({
         "MilkyCofee": require("../assets/fonts/MilkyCoffee.ttf"),
         "AmaticSC": require("../assets/fonts/AmaticSC-Regular.ttf"),
@@ -59,7 +63,9 @@ export default function WelcomeScreen() {
 
                 
 
-            }}>Start</Text>
+            }}
+            onPress={()=> navigation.navigate("Home")}
+           >Start</Text>
             </TouchableOpacity>
 
         </View>
