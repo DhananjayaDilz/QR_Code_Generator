@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState ,useEffect} from 'react';
 import { View, Text, TextInput, Alert, StyleSheet, TouchableOpacity } from 'react-native';
 import QRCode from 'react-native-qrcode-svg';
 import { useFonts } from 'expo-font';
@@ -22,6 +22,9 @@ const QRCodeGenerator = () => {
     SplashScreen.hideAsync();
   }
 
+  
+  
+ 
 
   const generateQRCode = () => {
     // Format the contact details into vCard format
@@ -34,12 +37,17 @@ EMAIL: ${email}
 
     setQRCodeData(contactDetails);
   };
+ 
 
   const handleSaveQRCode = () => {
-    // Perform action to save QR code image (You can add your code here)
-    Alert.alert('QR Code Saved');
+    // Perform action to save QR code image (...........)
+    Alert.alert('QR Code Saved in your gallery');
     // Reset QR code data to null
     setQRCodeData(null);
+    setName("");
+    setPhoneNumber("");
+    setEmail("");
+
   };
   return (
     <View style={styles.container}>

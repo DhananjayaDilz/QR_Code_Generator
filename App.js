@@ -23,7 +23,7 @@ export default function App() {
 
   );
 }
-
+//eas build -p android --profile preview
 const styles = StyleSheet.create({
   container: {
     flex: 1,
